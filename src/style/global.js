@@ -33,10 +33,10 @@ export default createGlobalStyle`
     font-size: 15px;
     display: inline-block;
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 40px;
     height: 40px;
     color: #000000;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
