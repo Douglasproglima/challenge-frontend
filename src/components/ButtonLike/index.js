@@ -9,18 +9,15 @@ export default class ButtonLike extends React.Component {
     likes: 0
   };
 
-  componentDidMount() {
-    const {data} = api.get('Article/GetLikes/1');
-    console.log(data);
+  async componentDidMount() {
+    const {data} = await api.get('Article/GetLikes/1');
     if(!data) return;
     this.setState({ likes: data.like });
   }
 
 
-  addLike = async  () => {
+  addLike = async () => {
     const {data} = await api.put('Article/Like/1');
-    console.log(data);
-
     this.setState({
       likes: data.like
     });
@@ -28,31 +25,22 @@ export default class ButtonLike extends React.Component {
 
   render() {
     const likes = this.state.likes;
-    //const likes = Article.Like;
     if (likes === 0) {
       return (
-          <div className="StytedButtonLike">
-            <button className="button" onClick={this.addLike}>
-              <FontAwesomeIcon icon={faHeart} />
+          <div className="">
+            <button className="StytedButtonLike" onClick={this.addLike}>
+              <span>Like</span>
+              ({likes})
             </button>
           </div>
 
       );
     }
-    if (likes == 1) {
+    if (likes >= 1) {
       return (
-          <div className="StytedButtonLike">
-            <button className="button" onClick={this.addLike}>
-              <FontAwesomeIcon icon={faHeart} />
-            </button>
-          </div>
-      );
-    }
-    if (likes > 1) {
-      return (
-          <div className="StytedButtonLike">
-            <button className="button" onClick={this.addLike}>
-              <FontAwesomeIcon icon={faHeart} />
+          <div className="">
+            <button className="StytedButtonLike" onClick={this.addLike}>
+              <FontAwesomeIcon  color={'#ff253a'} icon={faHeart} />
               {likes}
             </button>
           </div>

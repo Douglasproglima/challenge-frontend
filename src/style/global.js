@@ -28,26 +28,6 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  buttonLike {
-    display: inline-block;
-    height: 40px;
-    padding: 0 40px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 38px;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: transparent;
-    border-radius: 6px;
-    border: 1px solid #f47b00;
-    box-sizing: border-box;
-
-  }
-
   .StytedButtonLike {
     font-family: "helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif";
     font-size: 15px;
@@ -66,10 +46,14 @@ export default createGlobalStyle`
     text-decoration: none;
     white-space: nowrap;
     border-radius: 6px;
-    border: 1px solid #ffffff;
-    background: #0A7A42;
+    border: 1px solid #0A7A42;
+    background: #255fd8;
     /* background: transparent; */
     box-sizing: border-box;
+  }
+
+  svg {
+    margin-right: 15px;
   }
 
 `;
