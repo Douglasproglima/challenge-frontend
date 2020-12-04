@@ -1,7 +1,7 @@
 import React from 'react';
 import api from '../../services/api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/fontawesome-free-solid'
+import { faHeart, faThumbsUp } from '@fortawesome/fontawesome-free-solid'
 //import StytedButtonLike from './styled';
 
 export default class ButtonLike extends React.Component {
@@ -25,26 +25,13 @@ export default class ButtonLike extends React.Component {
 
   render() {
     const likes = this.state.likes;
-    if (likes === 0) {
-      return (
-          <div className="">
-            <button className="StytedButtonLike" onClick={this.addLike}>
-              <span>Like</span>
-              ({likes})
-            </button>
-          </div>
-
-      );
-    }
-    if (likes >= 1) {
-      return (
-          <div className="">
-            <button className="StytedButtonLike" onClick={this.addLike}>
-              <FontAwesomeIcon  color={'#ff253a'} icon={faHeart} />
-              {likes}
-            </button>
-          </div>
-      );
-    }
+    return (
+      <div className="">
+        <button className="StytedButtonLike" onClick={this.addLike}>
+        <FontAwesomeIcon  color={'#ffffff'} icon={faThumbsUp} />
+        <span className="span-text-like">Like ({likes})</span>
+        </button>
+      </div>
+    );
   }
 }

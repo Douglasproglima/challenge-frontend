@@ -52,8 +52,19 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .StytedButtonLike:hover {
+    background: #5182e6;
+    background-position: right center;
+  }
+
+  .span-text-like {
+    color: #ffffff;
+    text-align: center;
+    margin-right: 5px;
+  }
+
   svg {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 
 `;
